@@ -1,0 +1,8 @@
+<!-- postすることでそのobjectを消す -->
+{% extends 'base.html' %} <!-- base.htmlを引き継ぐ -->
+
+{% block content %}
+<form action="" method="POST">{% csrf_token %} <!-- フォームを送信した後にどのページに移動するか & HTTPプロトコルでデータをPOSTする時のメソッドの指定 -->
+<input type="submit" value="delete"> <!-- 送信ボタンの作成 -->
+</form>
+{% endblock content %}

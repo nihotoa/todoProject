@@ -1,0 +1,9 @@
+<!-- postすることでそのobjectを更新する-->
+{% extends 'base.html' %} <!-- base.htmlを引き継ぐ -->
+
+{% block content %}
+<form action="" method="POST">{% csrf_token %} <!-- フォームを送信した後にどのページに移動するか & HTTPプロトコルでデータをPOSTする時のメソッドの指定 -->
+{{ form.as_p }} <!-- (Djangoの内容)フィールドをもとに<p>を使用して送信用フォームを作成する -->
+<input type="submit" value="update"> <!-- 送信ボタンの作成 -->
+</form>
+{% endblock content %}
